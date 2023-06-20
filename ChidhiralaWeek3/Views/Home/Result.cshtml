@@ -1,0 +1,25 @@
+﻿@{
+    //Created By Chidhirala
+
+    ViewData["Title"] = "Home Values";
+}
+
+@model RealEstateModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Created by Chidhirala-->
+    <title>@ViewData["Title"]</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Chidhirala Real Este values</h1>
+    <p>your Home Value</p>
+    <p>Square Foot: @Model.Area.ToString("N4") SFt.</p>
+    <p>Number of Bed: @Model.BedRooms.</p>
+    <p>Number of Baths: @Model.Baths.ToString("N1")</p>
+    <p>Home Value: $ @Model.HomeValue.ToString("C")</p>
+
+</body>
+</html>

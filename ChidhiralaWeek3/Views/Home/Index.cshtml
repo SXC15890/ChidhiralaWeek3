@@ -1,0 +1,50 @@
+﻿@{
+    //Created By Chidhirala
+
+    ViewData["Title"] = "Sanjith Real Estate";
+}
+
+@model RealEstateModel
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Created by Chidhirala-->
+        <title>@ViewData["Title"]</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <h1>Lees Summit Real Esate</h1>
+        <p>Price per square feed is $159</p>
+        <p>Each bed room costs $25000 in a house</p>
+        <p>Each bath room costs $20000 in a house</p>
+
+        <h3>Estimate your home Value</h3>
+
+        <form asp-controller="Home" asp-action="Result" method="POST" >
+            <p>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" />
+                <span asp-validation-for="Name"></span>
+            </p>
+        <p>
+            <label asp-for="Area"></label>
+            <input asp-for="Area" />
+            <span asp-validation-for="Area"></span>
+        </p>
+        <p>
+            <label asp-for="BedRooms"></label>
+            <select asp-for="BedRooms" asp-items="Model.BedRoomList"> </select>
+            <span asp-validation-for="BedRooms"></span>
+        </p>
+        <p>
+            <label asp-for="Baths"></label>
+            <input asp-for="Baths" />
+            <span asp-validation-for="Baths"></span>
+        </p>
+        <p>
+            <input type="submit" />
+        </p>
+        </form>
+    </body>
+</html>
