@@ -14,31 +14,31 @@
         <meta charset="UTF-8" />
     </head>
     <body>
-        <h1>Lees Summit Real Esate</h1>
-        <p>Price per square feed is $159</p>
-        <p>Each bed room costs $25000 in a house</p>
-        <p>Each bath room costs $20000 in a house</p>
+        <h1>Lees Summit Electric Store</h1>
+    <p>each Vent costs $3000 (included installation fee)</p>
+        <p>Each Central AC costs $2500 (included installation fee) </p>
+        <p>Estimated current bill cost per unit area - $20</p>
 
         <h3>Estimate your home Value</h3>
 
         <form asp-controller="Home" asp-action="Result" method="POST" >
             <p>
-                <label asp-for="Name"></label>
+                <label asp-for="Name">Ac Brand</label>
                 <input asp-for="Name" />
                 <span asp-validation-for="Name"></span>
             </p>
         <p>
-            <label asp-for="Area"></label>
+            <label asp-for="Area">Area of house</label>
             <input asp-for="Area" />
             <span asp-validation-for="Area"></span>
         </p>
         <p>
-            <label asp-for="BedRooms"></label>
-            <select asp-for="BedRooms" asp-items="Model.BedRoomList"> </select>
+            <label asp-for="BedRooms" > Number of AC's</label> 
+            <select asp-for="BedRooms" asp-items="Model.BedRoomList"></select>
             <span asp-validation-for="BedRooms"></span>
         </p>
         <p>
-            <label asp-for="Baths"></label>
+            <label asp-for="Baths">Number of Vents</label>
             <input asp-for="Baths" />
             <span asp-validation-for="Baths"></span>
         </p>

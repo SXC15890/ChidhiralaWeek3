@@ -7,9 +7,9 @@ namespace ChidhiralaWeek3.Models
 {
     public class RealEstateModel
     {
-        private readonly int _bedValueAdd = 25000;
-        private readonly int _bathValueAdd = 20000;
-        private readonly decimal _areaValue = 159; // per Sqaure Feet
+        private readonly int _bedValueAdd = 2500;
+        private readonly int _bathValueAdd = 3000;
+        private readonly decimal _areaValue = 20; // per Sqaure Feet
 
         public decimal HomeValue {  get; set; } // where home value is calculated
 
@@ -24,13 +24,13 @@ namespace ChidhiralaWeek3.Models
         [Range((double)500, (double)9999, ErrorMessage ="Square Foot should be between 500 and 9999")]
         public decimal Area { get; set;}
 
-        [Required(ErrorMessage = "Please select number of bath rooms")]
-        [Range(2, 5, ErrorMessage = "Number of baths must be between 2 and 5")]
+        [Required(ErrorMessage = "Please select number of Vents")]
+        [Range(1, 4, ErrorMessage = "Number of Vents must be between 1 and 4")]
         public int Baths { get; set; }
 
         //property for select dropdown
-        [Required(ErrorMessage = "Please select number of bed rooms")]
-        [Range(1, 7, ErrorMessage = "Number of baths must be between 1 and 7")]
+        [Required(ErrorMessage = "Please select number of AC ")]
+        [Range(1, 7, ErrorMessage = "Number of AC must be between 1 and 7")]
         public int BedRooms { get; set; }
 
         // under lying list supporting the dropdown list items/ options
